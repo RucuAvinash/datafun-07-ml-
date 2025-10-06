@@ -10,10 +10,10 @@ py -3.12 --version
   py -3.12 -m venv .venv
 
 Prerequisites
-Python 3.8 or newer
-pip (Python package installer)
-git (to clone the repository)
+1. Python 3.8 or newer
+2. pip (Python package installer)
+3. git (to clone the repository)
 
 Upgrade pip and install dependencies:
-pip install --upgrade pip
-pip install -r requirements.txt
+1. pip install --upgrade pip
+2. pip install -r requirements.txt
