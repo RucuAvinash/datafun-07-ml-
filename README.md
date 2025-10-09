@@ -66,5 +66,5 @@ This project explores long-term temperature trends in New York City during Janua
 
 ## 🚀 How to Run
 
-1. Clone the repository
-2. Install dependencies: requirements.txt
+1. git clone https://github.com/YOUR_USERNAME/datafun-07-ml.git
+2. cd datafun-07-ml
