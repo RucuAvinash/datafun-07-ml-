@@ -1,19 +1,70 @@
-# datafun-07-ml-
-Predictive ML Project
-- Checked the Python versions using -  the following command:
-py --list
-- Installed Python 3.12
-winget install Python.Python.3.12
-- Verify Installation
-py -3.12 --version
-- Create your virtual environment using the older version:
-  py -3.12 -m venv .venv
+# 🌡️ NYC January Temperature Trend Analysis
 
-Prerequisites
-1. Python 3.8 or newer
-2. pip (Python package installer)
-3. git (to clone the repository)
+This project explores long-term temperature trends in New York City during January, using historical data from 1895 to 2018. It applies regression modeling and visualization techniques to analyze climate patterns and predict future temperatures.
 
-Upgrade pip and install dependencies:
-1. pip install --upgrade pip
-2. pip install -r requirements.txt
+---
+
+## 📁 Dataset
+
+- **Source**: `ave_hi_nyc_jan_1895-2018.csv`
+- **Fields**:
+  - `Date`: Year and month in `YYYYMM` format
+  - `Value`: Average high temperature in °F
+  - `Anomaly`: Deviation from the long-term average temperature (in °F)
+
+
+---
+
+## 🧪 Methodology
+
+### 1. Data Cleaning
+- Converted `Date` from `YYYYMM` to `YYYY`
+- Renamed `Value` to `Temperature` for clarity
+
+### 2. Regression Modeling
+- **SciPy `linregress`**: Quick slope and intercept estimation
+- **Scikit-learn `LinearRegression`**:
+  - Train/test split (75/25)
+  - Model training and prediction
+  - Evaluation using actual vs predicted comparison
+
+### 3. Predictions
+- **2024 Forecast**:
+  - SciPy: 38.59°F
+  - Scikit-learn: 38.94°F
+- **1890 Backcast**:
+  - Scikit-learn: 34.83°F
+
+---
+
+## 📊 Visualizations
+
+- Scatter plots of actual temperature data
+- Regression line overlay
+- Highlighted predictions for 2024 and 1890
+
+---
+
+## 🔍 Key Findings
+
+- NYC January temperatures show a **consistent warming trend** over the past century.
+- Forecasts for 2024 suggest continued warming, with average highs nearing 39°F.
+- Backcasting to 1890 reveals significantly cooler winters, reinforcing the long-term climate shift.
+
+---
+
+## 🛠️ Technologies Used
+
+- Python
+- Pandas
+- Matplotlib
+- Seaborn
+- SciPy
+- Scikit-learn
+
+---
+
+## 🚀 How to Run
+
+1. Clone the repository
+2. Install dependencies: requirements.txt
